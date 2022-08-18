@@ -23,19 +23,9 @@ public class EstudianteService {
     }
   }
 
-  // Implementar un servicio de negocio que dado un nivel, devuelva toda la lista de estudiantes
-  // perteneciente a ese nivel.
   public List<Estudiante> estudiantesPorNivel(Integer nivel) {
     return this.estudianteRepository.findByNivelOrderByCedula(nivel);
   }
-
-  // 3. Implementar un servicio que asigne un estudiante a un paralelo. El servicio debe esperar la
-  // siguiente información:
-  // a. Cedula
-  // b. Nivel
-  // - La asignación de paralelo la realizará de forma randómica.
-  // - Cada nivel tiene tres paralelos
-  // - Se debe verificar que la distribución de estudiantes por paralelo sea equilibrada
 
   public void asignarEstudiante(String cedula, Integer nivel) {
     Estudiante estudiante = this.buscar(cedula);

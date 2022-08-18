@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 public class ParaleloService {
   private final ParaleloRepository paraleloRepository;
 
-  // 4. Implementar un servicio de negocio que dado un nivel y un paralelo retorne la lista de
-  // estudiantes asignados
   public List<Estudiante> estudiantesParaleloNivel(Integer nivel, String letra) {
     Paralelo paralelo = this.buscarPorNivelYParalelo(nivel, letra);
     return paralelo.getEstudiantes();
